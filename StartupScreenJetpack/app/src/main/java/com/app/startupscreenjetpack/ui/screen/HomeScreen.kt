@@ -128,7 +128,6 @@ fun HomePage(userModel: UserViewModel) {
         }
     }
 
-
 }
 
 @Composable

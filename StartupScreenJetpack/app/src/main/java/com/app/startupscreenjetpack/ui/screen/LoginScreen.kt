@@ -17,6 +17,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material3.AlertDialogDefaults.shape
@@ -39,9 +41,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -82,6 +86,7 @@ fun LoginScreen(navController: NavHostController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             val username = remember { mutableStateOf(TextFieldValue()) }
+            val keyboardController = LocalSoftwareKeyboardController.current
 
             Text(
                 text = "Sign in",
@@ -102,7 +107,10 @@ fun LoginScreen(navController: NavHostController) {
                     shape = RoundedCornerShape(25.dp),
                     color = colorResource(id = R.color.primaryLight)
                 ),
-                
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+                keyboardActions = KeyboardActions(
+                    onDone = { keyboardController?.hide() }
+                ),
                 colors = TextFieldDefaults.colors(
                     cursorColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
                     disabledTextColor = Color.White,
