@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">StartupScreenJetpack</string>
+    <string name="slide_1">A New Way to Nourish</string>
+    <string name="slide_3">Guided Meditation</string>
+    <string name="slide_2">Plan Based Recipes</string>
+    <string name="slide_4">Yoga Practices</string>
+
+    <string name="bottom_navigation_home">Home</string>
+    <string name="bottom_navigation_receipes">Recipes</string>
+    <string name="bottom_navigation_wisdom">Nourish</string>
+    <string name="bottom_navigation_yoga">Yoga</string>
+    <string name="bottom_navigation_me">Me</string>
+
+    <!-- App Messages -->
+    <string name="a_msg_loggedout">Logged out successfully!</string>
+    <string name="a_session_title">Session Expired</string>
+    <string name="a_msg_session_expired">Session Expired.It seems you logged in different device.</string>
+    <string name="a_lbl_network_error">Network Error</string>
+    <string name="a_net_message">Internet connection is not available. Please try again!</string>
+    <string name="a_lbl_warning_title">Warning</string>
+    <string name="a_msg_server_error">There is some server error. Please try again later.</string>
+</resources>

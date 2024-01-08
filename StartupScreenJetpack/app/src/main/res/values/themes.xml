@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.StartupScreenJetpack" parent="android:Theme.Holo.NoActionBar.TranslucentDecor" >
+        <item name="android:windowBackground">@color/primary</item>
+
+    </style>
+</resources>
